@@ -1,0 +1,29 @@
+// Small devices (landscape phones, 576px and up)
+@media (min-width: $media-breakpoint-sm) {
+    .classname {
+        
+    }
+    .img_login{
+      display: none;
+    }
+  }
+  
+  // Medium devices (tablets, 768px and up)
+  @media (min-width: $media-breakpoint-md) {
+    .classname {
+        
+    }
+  }
+  
+  // Large devices (desktops, 992px and up)
+  @media (min-width: $media-breakpoint-lg) {
+    .classname {
+
+    }
+  }
+  // Extra large devices (large desktops, 1200px and up)
+  @media (min-width: $media-breakpoint-xl) {
+    .classname {
+
+    }
+  }

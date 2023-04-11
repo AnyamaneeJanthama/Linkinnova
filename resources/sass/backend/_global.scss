@@ -1,0 +1,26 @@
+.menuadminpanel{
+    a{
+        font-size: 20px;
+        color: white;
+        padding: 0.5rem;
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        i{
+            padding-right: 0.75rem;
+        }
+    }
+    .router-link-exact-active{
+        font-weight: bold;
+        background-color: white;
+        border-radius: 5px;
+    }
+}
+.index{
+    .btn-insert{
+        i{
+            font-size: 22px;
+        }
+    }
+}
