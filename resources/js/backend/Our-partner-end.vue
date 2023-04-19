@@ -14,7 +14,7 @@
                     </template>
                     <v-card>
                         <v-toolbar class="text-center text-white" color="#D50703"
-                            title="INSERT INTO NEWS & ACTIVITIES"></v-toolbar>
+                            title="INSERT INTO OUT PARTNER"></v-toolbar>
                         <v-card-text>
                             <v-container>
                                 <v-row class="d-flex align-center">
@@ -102,7 +102,7 @@
         <!-- dialog view -->
         <v-dialog v-model="dialogview" width="auto">
             <v-card>
-                <v-toolbar class="text-center text-white" color="#00D1FF" title="VIEW INTO NEWS & ACTIVITIES"></v-toolbar>
+                <v-toolbar class="text-center text-white" color="#00D1FF" title="VIEW OUT PARTNER"></v-toolbar>
                 <v-card-text>
                     <v-container>
                         <v-row class="d-flex align-center">
@@ -142,7 +142,7 @@
         <!-- dialog edit -->
         <v-dialog v-model="dialogedit" width="auto">
             <v-card>
-                <v-toolbar class="text-center text-white" color="#F9A825" title="EDIT INTO NEWS & ACTIVITIES"></v-toolbar>
+                <v-toolbar class="text-center text-white" color="#F9A825" title="EDIT OUT PARTNER"></v-toolbar>
                 <v-card-text>
                     <v-container>
                         <v-row class="d-flex align-center">
