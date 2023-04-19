@@ -34,7 +34,7 @@
                     ></v-text-field>
                   </v-col>
                   <v-col cols="12" class="text-center fw-bold pb-0">
-                    <v-btn href="/Index" color="black" size="large" class="px-10"
+                    <v-btn href="/Dashboard" color="black" size="large" class="px-10"
                       ><strong>Login</strong></v-btn
                     >
                   </v-col>

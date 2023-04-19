@@ -1,27 +1,11 @@
 <template>
   <v-app class="position-relative">
-    <app-bar
-      v-if="
-        currentPage != 'Login-admin' &&
-        currentPage != 'Login-link' &&
-        currentPage != 'Check-mail' &&
-        currentPage != 'Index'
-      "
-    ></app-bar>
+    <app-bar v-if="currentPage != 'Login-admin' && currentPage != 'Login-link' && currentPage != 'Check-mail' && currentPage != 'Dashboard' && currentPage != 'News-and-activitie-end' && currentPage != 'Current-projects-end' && currentPage != 'Completed-projects-end' && currentPage != 'Our-partner-end' && currentPage != 'Join-us-end'"></app-bar>
     <ban-ner v-if="currentPage == 'Home'"></ban-ner>
-
     <v-main class="main-container clearfix" id="con-tent">
       <router-view></router-view>
     </v-main>
-
-    <foo-ter
-      v-if="
-        currentPage != 'Login-admin' &&
-        currentPage != 'Login-link' &&
-        currentPage != 'Check-mail' &&
-        currentPage != 'Index'
-      "
-    ></foo-ter>
+    <foo-ter v-if="currentPage != 'Login-admin' && currentPage != 'Login-link' && currentPage != 'Check-mail' && currentPage != 'Dashboard' && currentPage != 'News-and-activitie-end' && currentPage != 'Current-projects-end' && currentPage != 'Completed-projects-end' && currentPage != 'Our-partner-end' && currentPage != 'Join-us-end'"></foo-ter>
   </v-app>
 </template>
 

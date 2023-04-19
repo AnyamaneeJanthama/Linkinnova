@@ -10,19 +10,19 @@
         <ul>
           <li>
             <router-link to="/Login-admin">
-              <i class="fa-solid fa-screwdriver-wrench"></i>
+              <i class="fa-light fa-screwdriver-wrench"></i>
               <v-tooltip activator="parent" location="start">Wed Admin</v-tooltip>
             </router-link>
           </li>
           <li>
             <router-link to="/Login-link">
-              <i class="fa-solid fa-key"></i>
+              <i class="fa-light fa-key"></i>
               <v-tooltip activator="parent" location="start">Link Login</v-tooltip>
             </router-link>
           </li>
           <li>
             <router-link to="/Check-mail">
-              <i class="fa-solid fa-envelope"></i>
+              <i class="fa-light fa-envelope"></i>
               <v-tooltip activator="parent" location="start">Check Mail</v-tooltip>
             </router-link>
           </li>

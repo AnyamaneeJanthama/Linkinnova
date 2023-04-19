@@ -31,7 +31,7 @@
                   <v-col cols="12" class="pb-0">
                     <v-text-field
                       label="Password"
-                      placeholder="Enter your Password"
+                      prepend-icon="mdi-1 mdi-key"
                       variant="outlined"
                     ></v-text-field>
                   </v-col>

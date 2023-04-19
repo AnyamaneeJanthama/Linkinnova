@@ -3,6 +3,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 const router = createRouter({
   history: createWebHistory(process.env.APP_PATH),
   routes: [
+    //////// FrontEnd ////////
     {
       path: '/Login-admin',
       name: 'Login-admin',
@@ -119,12 +120,54 @@ const router = createRouter({
         title: 'ช่องทางการติดต่อ',
       }
     },
+
+    //////// BackEnd ////////
     {
-      path: '/Index',
-      name: 'Index',
-      component: () => import('@/js/backend/Index'),
+      path: '/Dashboard',
+      name: 'Dashboard',
+      component: () => import('@/js/backend/Dashboard'),
       meta: {
-        title: 'ช่องทางการติดต่อ',
+        title: 'แดชบอร์ด',
+      }
+    },
+    {
+      path: '/News-and-activitie-end',
+      name: 'News-and-activitie-end',
+      component: () => import('@/js/backend/News-and-activitie-end'),
+      meta: {
+        title: 'แอดมินข่าวสาร',
+      }
+    },
+    {
+      path: '/Current-projects-end',
+      name: 'Current-projects-end',
+      component: () => import('@/js/backend/Current-projects-end'),
+      meta: {
+        title: 'แอดมินโครงการปัจจุบัน',
+      }
+    },
+    {
+      path: '/Completed-projects-end',
+      name: 'Completed-projects-end',
+      component: () => import('@/js/backend/Completed-projects-end'),
+      meta: {
+        title: 'แอดมินโครงการเสร็จสิ้น',
+      }
+    },
+    {
+      path: '/Our-partner-end',
+      name: 'Our-partner-end',
+      component: () => import('@/js/backend/Our-partner-end'),
+      meta: {
+        title: 'แอดมินพันธมิตร',
+      }
+    },
+    {
+      path: '/Join-us-end',
+      name: 'Join-us-end',
+      component: () => import('@/js/backend/Join-us-end'),
+      meta: {
+        title: 'แอดมินเข้าร่วม',
       }
     },
   ],

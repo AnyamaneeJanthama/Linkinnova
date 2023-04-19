@@ -3,26 +3,9 @@
     <v-container>
       <v-row class="mt-12 mb-6">
         <v-col md="4" sm="12" cols="12">
-          <v-card
-            :class="{ 'on-hover': isHovering }"
-            class="mx-auto style-shadow"
-            height="auto"
-            max-width="100%"
-          >
-            <v-carousel
-              hide-delimiters
-              cycle
-              hide-delimiter-background
-              class="card-content"
-              :show-arrows="false"
-            >
-              <v-carousel-item
-                disabled-3
-                v-for="(slide, i) in slides"
-                :key="i"
-                :src="app_url + img_naa[i]"
-                cover
-              >
+          <v-card :class="{ 'on-hover': isHovering }" class="mx-auto style-shadow" height="auto" max-width="100%">
+            <v-carousel hide-delimiters cycle hide-delimiter-background class="card-content" :show-arrows="false">
+              <v-carousel-item disabled-3 v-for="(slide, i) in slides" :key="i" :src="app_url + img_naa[i]" cover>
               </v-carousel-item>
             </v-carousel>
             <v-card-text class="txt-content">
@@ -36,26 +19,9 @@
           </v-card>
         </v-col>
         <v-col md="4" sm="12" cols="12">
-          <v-card
-            :class="{ 'on-hover': isHovering }"
-            class="mx-auto style-shadow"
-            height="auto"
-            max-width="100%"
-          >
-            <v-carousel
-              hide-delimiters
-              cycle
-              hide-delimiter-background
-              class="card-content"
-              :show-arrows="false"
-            >
-              <v-carousel-item
-                disabled-3
-                v-for="(slide, i) in slides"
-                :key="i"
-                :src="app_url + img_crp[i]"
-                cover
-              >
+          <v-card :class="{ 'on-hover': isHovering }" class="mx-auto style-shadow" height="auto" max-width="100%">
+            <v-carousel hide-delimiters cycle hide-delimiter-background class="card-content" :show-arrows="false">
+              <v-carousel-item disabled-3 v-for="(slide, i) in slides" :key="i" :src="app_url + img_crp[i]" cover>
               </v-carousel-item>
             </v-carousel>
             <v-card-text class="txt-content">
@@ -69,26 +35,9 @@
           </v-card>
         </v-col>
         <v-col md="4" sm="12" cols="12">
-          <v-card
-            :class="{ 'on-hover': isHovering }"
-            class="mx-auto style-shadow"
-            height="auto"
-            max-width="100%"
-          >
-            <v-carousel
-              hide-delimiters
-              cycle
-              hide-delimiter-background
-              class="card-content"
-              :show-arrows="false"
-            >
-              <v-carousel-item
-                disabled-3
-                v-for="(slide, i) in slides"
-                :key="i"
-                :src="app_url + img_cpp[i]"
-                cover
-              >
+          <v-card :class="{ 'on-hover': isHovering }" class="mx-auto style-shadow" height="auto" max-width="100%">
+            <v-carousel hide-delimiters cycle hide-delimiter-background class="card-content" :show-arrows="false">
+              <v-carousel-item disabled-3 v-for="(slide, i) in slides" :key="i" :src="app_url + img_cpp[i]" cover>
               </v-carousel-item>
             </v-carousel>
             <v-card-text class="txt-content">

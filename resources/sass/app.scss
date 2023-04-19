@@ -1,6 +1,6 @@
 // Fonts
 // @import url('https://fonts.bunny.net/css?family=Nunito');
-@import url('https://fonts.googleapis.com/css2?family=Luckiest+Guy&family=Neuton:wght@300&family=Roboto&family=Sarabun:wght@100;300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai&display=swap');
 
 // Variables
 @import 'variables';
@@ -17,6 +17,6 @@
 // Normalize CSS
 @import '~normalize.css/normalize.css';
 
-#app{
-    font-family: 'Roboto';
+*{
+    font-family: 'Noto Sans Thai', sans-serif;
 }
