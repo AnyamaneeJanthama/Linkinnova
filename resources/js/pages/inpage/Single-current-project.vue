@@ -31,9 +31,9 @@
       <div class="gallery">
         <v-row>
           <v-col cols="6" sm="4" md="3" lg="2" v-for="(item, index) in items" :key="index" class="card-content">
-            <v-card class="mx-auto" height="100%" max-width="100%" v-bind="props">
+            <v-card class="mx-auto" height="95%" v-bind="props">
               <div class="class-image">
-                <v-img height="200" :src="app_url + item.img" cover />
+                <v-img height="150" :src="app_url + item.img" cover />
               </div>
             </v-card>
           </v-col>
