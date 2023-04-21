@@ -2,7 +2,7 @@
   <section class="page-contents">
     <div class="banner-page">
       <img
-        :src="app_url + '/images/banner/banner-news-and-activities.png'"
+        src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSrpENKIwRyNT-UaJlO8X09KgQilUQKOo6KevC-_YxmLHNECaLErXaZRfvMaaJCPHez_NRrCy2-1sQFNYaYwwGwy6_6tA=w1960-h1424"
         class="d-block"
         alt="Banner Join us"
       />

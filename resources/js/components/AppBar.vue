@@ -1,11 +1,11 @@
 <template>
   <!-- Menu Bar Media-->
   <v-navigation-drawer color="#414141" v-model="drawer" location="right" temporary>
-    <div class="icon-login py-2">
+    <div class="icon-login-menu py-2">
       <ul>
-        <li><i class="fa-solid fa-screwdriver-wrench"></i></li>
-        <li><i class="fa-solid fa-key"></i></li>
-        <li><i class="fa-solid fa-envelope"></i></li>
+        <li><i class="fa-light fa-screwdriver-wrench"></i></li>
+        <li><i class="fa-light fa-key"></i></li>
+        <li><i class="fa-light fa-envelope"></i></li>
       </ul>
       <!-- <div class="text-end">
         <i class="fa-regular fa-bars" @click.stop="drawer = !drawer"></i>

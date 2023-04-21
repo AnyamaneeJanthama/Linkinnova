@@ -87,6 +87,25 @@ header.sticky#app-bar {
     margin-top: 0.5rem;
   }
 }
+.icon-login-menu {
+  font-size: 24px;
+  margin-bottom: 5px;
+  padding: 0;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+      margin-left: 0.75rem;
+      color: #fff;
+
+      i {
+        font-size: 18px;
+      }
+    }
+  }
+}
 
 #dropdown-munu {
   a {
