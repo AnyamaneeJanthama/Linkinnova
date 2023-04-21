@@ -1,89 +1,167 @@
-#app-bar{
-    background-color: transparent;
-    box-shadow: none;
+#app-bar {
+  background-color: transparent;
+  box-shadow: none;
+  transition: 0.3s;
+  user-select: none;
+
+  .style-logo {
     transition: 0.3s;
-    user-select: none;
-    .style-logo{
-        transition: 0.3s;
-        width: 60%;
-        margin-left: 1.25rem;
-    }
-    .menu-bar{
-        margin: 0;
+    width: 60%;
+    margin-left: 1.25rem;
+  }
 
-        ul{
-            list-style: none;
-            li{
-                color: #fff;
-                display: inline;
-                margin-left: 2rem;
-                font-weight:bold;
+  .menu-bar {
+    margin: 0;
 
-                span{
-                    font-weight: bold;
-                    cursor: pointer;
-                }
-                span:hover{
-                    color: red;
-                }
-            }
-        }
-    }
+    ul {
+      list-style: none;
 
-    .icon-login{
-        text-align: end;
-        font-size: 18px;
-        margin-bottom: 5px;
-        padding:0 ;
-
-        ul{
-            list-style: none;
-
-            li{
-                display: inline;
-                margin-left: 0.75rem;
-
-                i{
-                    font-size: 18px;
-                }
-            }
-        }
-    }
-    a{
+      li {
         color: #fff;
-        // color: #ffbb00;
-        text-decoration: none;
-    }
-    a:hover{
-            color: red;
+        display: inline;
+        margin-left: 2rem;
+        font-weight: bold;
+
+        span {
+          font-weight: bold;
+          cursor: pointer;
         }
-    }
-    .router-link-exact-active{
-        color: red !important;
-    }
-  header.sticky#app-bar{
-    height:auto;
-    padding-top: 0.5rem;
-    background: #323232;
-    transition: 0.3s;
-    .style-logo{
-        transition: 0.3s;
-        width: 65%;
-        margin-left: 1.25rem;
-    }
-    .menu-bar{
-        transition: 0.3s;
-        margin-top: 0.5rem;
+
+        span:hover {
+          color: red;
+        }
+      }
     }
   }
 
-  #dropdown-munu{
-    a{
-        color: #000;
-        text-decoration: none ;
-        font-weight:bold;
+
+  .icon-login {
+    text-align: end;
+    font-size: 18px;
+    margin-bottom: 5px;
+    padding: 0;
+
+    ul {
+      list-style: none;
+
+      li {
+        display: inline;
+        margin-left: 0.75rem;
+
+        i {
+          font-size: 18px;
+        }
+      }
     }
-    a:hover{
-        color: red;
+  }
+
+  a {
+    color: #fff;
+    // color: #ffbb00;
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: red;
+  }
+}
+
+.router-link-exact-active {
+  color: red !important;
+}
+
+header.sticky#app-bar {
+  height: auto;
+  // top: -50px;
+  padding-top: 0.5rem;
+  background: #323232;
+  transition: 0.3s;
+
+  .style-logo {
+    transition: 0.3s;
+    width: 65%;
+    margin-left: 1.25rem;
+  }
+
+  .menu-bar {
+    transition: 0.3s;
+    margin-top: 0.5rem;
+  }
+}
+
+#dropdown-munu {
+  a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: red;
+  }
+}
+
+.icon-login {
+  margin-top: 0.5rem;
+  color: #fff;
+  font-size: 18px;
+  margin-bottom: 5px;
+  padding: 0;
+
+  ul {
+    list-style: none;
+
+    li {
+      display: inline;
+      margin-left: 1rem;
+
+      i {
+        font-size: 22px;
+      }
     }
+  }
+}
+
+#dropdown-munu {
+  a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+  }
+
+  a:hover {
+    color: red;
+  }
+}
+
+.media-menu {
+
+  ul {
+    list-style: none;
+
+    li {
+      padding-top: 0.5rem;
+      padding-bottom: 0.5rem;
+      color: #fff;
+
+      a,span{
+        padding-left: 1rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 16px;
+      }
+      .submenu{
+        background-color: #2C2C2C;
+      }
+
+      .v-list-item--density-default:not(.v-list-item--nav).v-list-item--one-line {
+        padding-inline-start: 0px !important;
+        // -webkit-padding-end: 0px; 
+        //  padding-inline-end: 0px; 
+      }
+
+      
+    }
+  }
 }

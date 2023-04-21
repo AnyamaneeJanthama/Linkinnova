@@ -1,15 +1,11 @@
 <template>
   <section class="page-contents">
     <div class="mx-auto opacity-banner">
-      <v-img
-        dark
-        :src="app_url + '/images/banner/banner-completed-projects.jpg'"
-        class="banner-inpage align-center"
-        max-height="500"
-      >
+      <v-img dark :src="app_url + '/images/banner/banner-completed-projects.jpg'" class="banner-inpage align-center"
+        max-height="500">
         <v-row>
           <v-col class="text-center" cols="12">
-            <span class="underline-header text-white">Current project</span>
+            <span class="underline-header-inpage text-white">Current project</span>
           </v-col>
         </v-row>
       </v-img>
@@ -23,9 +19,7 @@
           <v-icon>mdi-chevron-right</v-icon>
         </li>
         <li>
-          <router-link to="/Current-projects"
-            ><strong>ALL Current Projects</strong></router-link
-          >
+          <router-link to="/Current-projects"><strong>ALL Current Projects</strong></router-link>
         </li>
         <li>
           <v-icon>mdi-chevron-right</v-icon>
@@ -36,12 +30,7 @@
     <div class="single-content">
       <div class="gallery">
         <v-row>
-          <v-col
-            cols="2"
-            v-for="(item, index) in items"
-            :key="index"
-            class="card-content"
-          >
+          <v-col cols="6" sm="4" md="3" lg="2" v-for="(item, index) in items" :key="index" class="card-content">
             <v-card class="mx-auto" height="100%" max-width="100%" v-bind="props">
               <div class="class-image">
                 <v-img height="200" :src="app_url + item.img" cover />

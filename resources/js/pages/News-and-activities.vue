@@ -24,7 +24,7 @@
     </div>
     <v-container class="card-article-news-and-activities">
       <v-row class="my-5">
-        <v-col cols="3" v-for="item in items" :key="item.id">
+        <v-col lg="3" md="4" sm="6" cols="12" v-for="item in items" :key="item.id">
           <router-link
             :to="{ params: { id: item.id }, name: 'News-and-activities-read' }"
           >

@@ -1,12 +1,8 @@
 <template>
   <section class="page-contents">
     <div class="mx-auto opacity-banner">
-      <v-img
-        dark
-        :src="app_url + '/images/banner/banner-completed-projects.jpg'"
-        class="banner-inpage align-center"
-        max-height="500"
-      >
+      <v-img dark :src="app_url + '/images/banner/banner-completed-projects.jpg'" class="banner-inpage align-center"
+        max-height="500">
         <v-row>
           <v-col class="text-center" cols="12">
             <span class="underline-header text-white">Completed project</span>
@@ -23,9 +19,7 @@
           <v-icon>mdi-chevron-right</v-icon>
         </li>
         <li>
-          <router-link to="/Current-projects"
-            ><strong>ALL Current Projects</strong></router-link
-          >
+          <router-link to="/Current-projects"><strong>ALL Current Projects</strong></router-link>
         </li>
         <li>
           <v-icon>mdi-chevron-right</v-icon>
@@ -37,12 +31,12 @@
       <v-container v-if="post.video != ''">
         <div class="video">
           <v-row class="mb-3">
-            <v-col cols="6">
-              <div class="video-current-project">
-                <embed width="100%" height="350px" :src="post.video" type="" />
+            <v-col cols="12" sm="12" md="6" lg="6">
+              <div class="videoWrapper">
+                <embed :src="post.video" type="" />
               </div>
             </v-col>
-            <v-col cols="6">
+            <v-col cols="12" sm="12" md="6" lg="6">
               <h2>{{ post.title }}</h2>
               <h5>{{ post.subtitle }}</h5>
             </v-col>
@@ -52,12 +46,7 @@
       </v-container>
       <div class="gallery">
         <v-row>
-          <v-col
-            cols="2"
-            v-for="(item, index) in items"
-            :key="index"
-            class="card-content"
-          >
+          <v-col cols="6" sm="4" md="3" lg="2" v-for="(item, index) in items" :key="index" class="card-content">
             <v-card class="mx-auto" height="100%" max-width="100%" v-bind="props">
               <div class="class-image">
                 <v-img height="200" :src="app_url + item.img" cover />

@@ -1,17 +1,14 @@
 .footer{
     height: auto;
-    padding: 1.5rem 2rem 1.5rem 2rem !important;
+    // padding: 1.5rem 2rem 1.5rem 2rem !important;
     background-color: #323232 !important;
     text-transform: uppercase;
 
     img{
-        padding: 12px;
+        width: 40%;
     }
     
     .txt-menu{
-        padding-top: 7px;
-        padding-left: 70px;
-
         a{
             color: #fff;
             font-size: 18px;
@@ -28,7 +25,7 @@
     
 
     .style-content{
-        padding:6px 6px 6px 1.5rem !important;
+        // padding:6px 6px 6px 1.5rem !important;
 
         p{
             font-size: 18px;
@@ -49,21 +46,9 @@
                 color: rgb(0, 8, 255);
             }
             i{
-                font-size: 36px;
-                margin-right: 1.5rem;
+                font-size: 200%;
+                // margin-right: 5%;
             }
         }
-    }
-}
-.dropdown-munu{
-    padding: 0;
-    text-transform: uppercase;
-    a{
-        color: #000;
-        text-decoration: none ;
-        font-weight:bold;
-    }
-    a:hover{
-        color: red;
     }
 }

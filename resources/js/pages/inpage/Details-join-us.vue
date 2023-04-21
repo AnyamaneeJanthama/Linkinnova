@@ -1,17 +1,13 @@
 <template>
   <section class="page-contents">
     <div class="mx-auto opacity-banner">
-      <v-img
-        dark
-        :src="app_url + '/images/banner/banner-news-and-activities.png'"
-        class="banner-inpage align-center"
-        max-height="500"
-      >
+      <v-img dark src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSrpENKIwRyNT-UaJlO8X09KgQilUQKOo6KevC-_YxmLHNECaLErXaZRfvMaaJCPHez_NRrCy2-1sQFNYaYwwGwy6_6tA=w1960-h1424" class="banner-inpage align-center"
+        max-height="500">
         <v-row>
           <v-col class="text-center" cols="12">
-            <span class="underline-header text-white">Join us</span>
+            <span class="underline-header-inpage text-white">Join us</span>
             <div class="text-white mt-4">
-              <h2>รายละเอียดตำแหน่ง{{ post.name }}</h2>
+              <span>รายละเอียดตำแหน่ง{{ post.name }}</span>
             </div>
           </v-col>
         </v-row>
@@ -38,7 +34,7 @@
       <h1>รายละเอียด</h1>
     </div>
     <v-container class="discription-stype">
-      <h3>ลักษณะงาน</h3>
+      <span class="text-head-join-us">ลักษณะงาน</span>
       <ul>
         <li>- ประจำสำนักงานใหญ่เชียงใหม่</li>
         <li>- ไปตรวจงานต่างจังหวัดได้</li>
@@ -69,7 +65,7 @@
       </v-parallax>
     </div>
     <v-container class="discription-stype">
-      <h3>คุณสมบัติผู้สมัคร</h3>
+      <span class="text-head-join-us">คุณสมบัติผู้สมัคร</span>
       <!-- <v-divider :thickness="4" class="border-opacity-100" color="error"></v-divider> -->
       <ul>
         <li>- ชาย หรือ หญิง อายุ 23 ถึง 35 ปี</li>

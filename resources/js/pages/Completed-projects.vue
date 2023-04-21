@@ -26,7 +26,7 @@
         <v-pagination v-model="page" :length="20" :total-visible="7"></v-pagination>
       </div>
       <v-row class="my-5">
-        <v-col cols="3" class="pa-3" v-for="item in items" :key="item.id">
+        <v-col lg="4" md="4" sm="6" cols="12" class="pa-3" v-for="item in items" :key="item.id">
           <router-link
             :to="{ params: { id: item.id }, name: 'Single-completed-project' }"
           >

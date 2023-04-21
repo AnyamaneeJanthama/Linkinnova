@@ -15,15 +15,15 @@
         <li>
           <v-icon>mdi-chevron-right</v-icon>
         </li>
-        <li>Contact us</li>
+        <li>OUR PARTNER</li>
       </ol>
     </div>
     <div class="py-5 mt-3 text-center">
-      <span class="underline-header">Contact us</span>
+      <span class="underline-header">OUR PARTNER</span>
     </div>
     <v-container class="card-partner">
       <v-row>
-        <v-col cols="3" class="px-6" v-for="(item, index) in items" :key="index">
+        <v-col lg="3" md="3" sm="4" cols="6" class="px-6" v-for="(item, index) in items" :key="index">
           <a :href="item.url" target="_blank" class="text-decoration-none text-dark">
             <v-card class="mx-auto" max-width="100%" height="auto">
               <v-img class="align-end text-black text-animetion" :src="item.img" contain>

@@ -23,7 +23,7 @@
     </div>
     <v-container class="card-articlr-projects">
       <v-row>
-        <v-col cols="3" class="pa-3" v-for="item in items" :key="item.id">
+        <v-col lg="4" md="4" sm="6" cols="12" class="pa-3" v-for="item in items" :key="item.id">
           <router-link :to="{ params: { id: item.id }, name: 'Single-current-project' }">
             <v-card class="mx-auto card-content" max-width="100%">
               <v-img

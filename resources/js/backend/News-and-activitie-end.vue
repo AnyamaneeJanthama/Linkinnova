@@ -1,6 +1,5 @@
 <template>
     <div>
-        <side-bar></side-bar>
         <v-main>
             <v-row class="ma-1 news-activitie">
                 <!-- dialogInsert -->

@@ -37,17 +37,15 @@
                 width: 50%;
                 height: auto;
                 padding: 10px 0;
-                color: red;
+                background-color: red;
+                color:#fff;
                 border: 2px solid red;
                 border-radius: 3px;
                 font-size: 18px;
                 font-weight: bold;
                 text-shadow: 1px 1px 1.5px #b9b9b9 ;
             }
-            .btn:hover{
-                background-color: red;
-                color:#fff;
-            }
+            
         }
     }
 

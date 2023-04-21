@@ -1,29 +1,52 @@
-// Small devices (landscape phones, 576px and up)
+// Small devices (landscape phones, 600px and up)
 @media (min-width: $media-breakpoint-sm) {
-    .classname {
-        
+  .bg-parallax-contant {
+    .bg-text {
+      padding: 20%;
     }
-    .img_login{
-      display: none;
-    }
+
   }
-  
-  // Medium devices (tablets, 768px and up)
-  @media (min-width: $media-breakpoint-md) {
-    .classname {
-        
+
+}
+
+// Medium devices (tablets, 960px and up)
+@media (min-width:$media-breakpoint-md) {
+  #home {
+    .style-shadow {
+      .style-btn {
+        .btn {
+          background-color: white;
+          color:red;
+        }
+        .btn:hover {
+          background-color: rgb(255, 0, 0);
+          color:rgb(255, 255, 255);
+        }
+
+      }
     }
+
   }
-  
-  // Large devices (desktops, 992px and up)
-  @media (min-width: $media-breakpoint-lg) {
-    .classname {
+
+  .bg-parallax-contant {
+
+    .bg-text {
+      padding: 10% 5%;
+
+      .col-socialmedia {
+        text-align: end;
+      }
 
     }
   }
-  // Extra large devices (large desktops, 1200px and up)
-  @media (min-width: $media-breakpoint-xl) {
-    .classname {
+}
 
-    }
+// Large devices (desktops, 1280px and up)
+@media (min-width: $media-breakpoint-lg) {}
+
+// Extra large devices (large desktops, 1920px and up)
+@media (min-width: $media-breakpoint-xl) {
+  .classname {
+    color: gray;
   }
+}

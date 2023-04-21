@@ -1,6 +1,5 @@
 <template>
     <div>
-        <side-bar></side-bar>
         <v-main>
             <v-row class="ma-1 news-activitie">
                 <!-- dialogInsert -->
@@ -49,10 +48,9 @@
                                         <input type="date" name="date">
                                     </v-col>
                                     <v-col class="d-flex justify-center align-center fileinsert" cols="12" sm="12" md="12">
-                                        <img :src="app_url + '/images/01.jpg'" alt="" >
+                                        <img :src="app_url + '/images/01.jpg'" alt="">
                                         <label for="myImage"><i class="mdi mdi-image-plus-outline"></i></label>
-                                        <input type="file" id="myImage"
-                                            accept="image/png, image/gif, image/jpeg" />
+                                        <input type="file" id="myImage" accept="image/png, image/gif, image/jpeg" />
                                     </v-col>
                                 </v-row>
                             </v-container>
@@ -93,14 +91,12 @@
                                     <td>{{ item.videoname }}</td>
                                     <td>
                                         <!-- dialogView -->
-                                        <v-btn color="#00D1FF" class="text-white"
-                                            @click="dialogview = true">
+                                        <v-btn color="#00D1FF" class="text-white" @click="dialogview = true">
                                             <i class="fa-solid fa-eye"></i>
                                         </v-btn>
                                         <!-- dialogView END -->
                                         <!-- dialogEdit -->
-                                        <v-btn color="#F9A825" class="text-white"
-                                            @click="dialogedit = true">
+                                        <v-btn color="#F9A825" class="text-white" @click="dialogedit = true">
                                             <i class="fa-solid fa-file-pen"></i>
                                         </v-btn>
                                         <!-- dialogEdit END -->
@@ -126,31 +122,36 @@
                                 <v-list-subheader>ID : </v-list-subheader>
                             </v-col>
                             <v-col cols="9" sm="9" md="9" class="dialogtitleunderline">
-                                <v-text-field variant="Plain" model-value="2" single-line hide-details readonly></v-text-field>
+                                <v-text-field variant="Plain" model-value="2" single-line hide-details
+                                    readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Title : </v-list-subheader>
                             </v-col>
                             <v-col cols="9" sm="9" md="9">
-                                <v-text-field variant="Plain" model-value="อาคาร" single-line hide-details readonly></v-text-field>
+                                <v-text-field variant="Plain" model-value="อาคาร" single-line hide-details
+                                    readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Video Name : </v-list-subheader>
                             </v-col>
                             <v-col cols="9" sm="9" md="9">
-                                <v-text-field variant="Plain" model-value="....." single-line hide-details readonly></v-text-field>
+                                <v-text-field variant="Plain" model-value="....." single-line hide-details
+                                    readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Description : </v-list-subheader>
                             </v-col>
                             <v-col cols="9" sm="9" md="9">
-                                <v-textarea variant="Plain" model-value="......" single-line hide-details readonly></v-textarea>
+                                <v-textarea variant="Plain" model-value="......" single-line hide-details
+                                    readonly></v-textarea>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>YouTube Link : </v-list-subheader>
                             </v-col>
                             <v-col cols="9" sm="9" md="9">
-                                <v-text-field variant="Plain" model-value="......" single-line hide-details readonly></v-text-field>
+                                <v-text-field variant="Plain" model-value="......" single-line hide-details
+                                    readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Date Create : </v-list-subheader>
@@ -190,13 +191,16 @@
                                 <v-list-subheader>Video Name : </v-list-subheader>
                             </v-col>
                             <v-col cols="9" sm="9" md="9">
-                                <v-text-field variant="outlined" model-value="....." single-line hide-details readonly></v-text-field>
+                                <v-text-field variant="outlined" model-value="....." single-line hide-details
+                                    readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Description : </v-list-subheader>
                             </v-col>
                             <v-col cols="10" sm="10" md="10">
-                                <v-textarea variant="outlined" model-value="The Woodman set to work at once, and so sharp was his axe that the tree was soon chopped nearly through."></v-textarea>
+                                <v-textarea variant="outlined">
+                                    <p v-html="INTO"></p>
+                                </v-textarea>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>YouTube Link : </v-list-subheader>
@@ -288,6 +292,4 @@ export default {
 }
 </script>
 
-<style>
-
-</style>
+<style></style>

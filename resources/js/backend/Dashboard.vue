@@ -1,6 +1,5 @@
 <template>
     <div>
-        <side-bar></side-bar>
         <v-main>
             <v-img src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSjK3QJN8S2RGJzcw9F-LBnsC2R5qWEFFXk3HaBP4Ujzd5Li5g5gTizb2wBKx0Rz1_KIHn7WQx8nf8YLZLN-1DW10fm2A=w1325-h650" class="borderimg">
             </v-img>

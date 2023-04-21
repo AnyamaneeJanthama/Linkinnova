@@ -19,8 +19,8 @@
     </div>
     <div class="bg-parallax-contant">
       <v-parallax :src="app_url + '/images/images-background/bg-parallax.jpg'">
-        <v-row class="bg-text align-center">
-          <v-col class="text-end" lg="5" md="5" sm="12" cols="12">
+        <v-row class="bg-text align-center" :class="md">
+          <v-col class="col-socialmedia" lg="5" md="5" sm="12" cols="12">
             <h1>Social Media</h1>
             <h4>
               <i class="fa-brands fa-facebook"> </i>
@@ -32,15 +32,9 @@
               <a href="https://www.youtube.com/@linkinnova3915" target="_blank">LINK INNOVA(@linkinnova3915)</a>
             </h4>
           </v-col>
-          <v-divider :thickness="2" class="border-opacity-100 mx-5" color="whige" vertical></v-divider>
-          <v-col class="pt-5" lg="6" md="6" sm="12" cols="12">
-            <h4>
-              <i class="fa-light fa-location-dot"></i>
-              <a href="https://www.google.co.th/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A5%E0%B8%B4%E0%B8%87%E0%B8%84%E0%B9%8C+%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B9%82%E0%B8%99%E0%B8%A7%E0%B9%88%E0%B8%B2+%E0%B8%9E%E0%B8%A3%E0%B9%87%E0%B8%AD%E0%B8%9E%E0%B9%80%E0%B8%9E%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%B5%E0%B9%89+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/@18.8544019,99.0944933,17z/data=!3m1!4b1!4m6!3m5!1s0x30da241ce2a68ea5:0xbba4a0c990755ccd!8m2!3d18.8543968!4d99.0966873!16s%2Fg%2F1td8vywq?hl=th"
-                target="_blank">
-                50 หมู่ 2 ต.ตลาดขวัญ อำเภอดอยสะเก็ต
-                จังหวัดเชียงใหม่ 50220</a>
-            </h4>
+          <v-divider :thickness="2" class="border-opacity-100 mx-5 hidden-sm-and-down" color="whige" vertical></v-divider>
+          <v-divider class="border-opacity-100 hidden-md-and-up"></v-divider>
+          <v-col class=" pt-5" lg="6" md="6" sm="12" cols="12">
             <h4>
               <i class="fa-light fa-phone-volume"></i>
               053-039191
@@ -52,6 +46,13 @@
             <h4>
               <i class="fa-light fa-envelope"></i>
               link.innova@link.co.th
+            </h4>
+            <h4>
+              <i class="fa-light fa-location-dot"></i>
+              <a href="https://www.google.co.th/maps/place/%E0%B8%9A%E0%B8%A3%E0%B8%B4%E0%B8%A9%E0%B8%B1%E0%B8%97+%E0%B8%A5%E0%B8%B4%E0%B8%87%E0%B8%84%E0%B9%8C+%E0%B8%AD%E0%B8%B4%E0%B8%99%E0%B9%82%E0%B8%99%E0%B8%A7%E0%B9%88%E0%B8%B2+%E0%B8%9E%E0%B8%A3%E0%B9%87%E0%B8%AD%E0%B8%9E%E0%B9%80%E0%B8%9E%E0%B8%AD%E0%B8%A3%E0%B9%8C%E0%B8%95%E0%B8%B5%E0%B9%89+%E0%B8%88%E0%B8%B3%E0%B8%81%E0%B8%B1%E0%B8%94/@18.8544019,99.0944933,17z/data=!3m1!4b1!4m6!3m5!1s0x30da241ce2a68ea5:0xbba4a0c990755ccd!8m2!3d18.8543968!4d99.0966873!16s%2Fg%2F1td8vywq?hl=th"
+                target="_blank">
+                50 หมู่ 2 ต.ตลาดขวัญ อำเภอดอยสะเก็ต
+                จังหวัดเชียงใหม่ 50220</a>
             </h4>
           </v-col>
         </v-row>

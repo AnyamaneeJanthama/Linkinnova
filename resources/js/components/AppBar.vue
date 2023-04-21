@@ -1,12 +1,77 @@
 <template>
-  <!-- <v-app-bar color="grey-lighten-2" height="100"> -->
+  <!-- Menu Bar Media-->
+  <v-navigation-drawer color="#414141" v-model="drawer" location="right" temporary>
+    <div class="icon-login py-2">
+      <ul>
+        <li><i class="fa-solid fa-screwdriver-wrench"></i></li>
+        <li><i class="fa-solid fa-key"></i></li>
+        <li><i class="fa-solid fa-envelope"></i></li>
+      </ul>
+      <!-- <div class="text-end">
+        <i class="fa-regular fa-bars" @click.stop="drawer = !drawer"></i>
+      </div> -->
+    </div>
+    <v-divider class="border-opacity-25" color="white"></v-divider>
+    <div class="media-menu">
+      <ul>
+        <li>
+          <router-link to="/">Home</router-link>
+        </li>
+        <li>
+          <router-link to="/News-and-activities"
+            :class="$route.name == 'News-and-activities-read' ? 'router-link-exact-active' : ''">News &
+            activities</router-link>
+        </li>
+        <li class="v-list-our-project">
+          <v-list class="pa-0">
+            <v-list-group>
+              <template v-slot:activator="{ props }">
+                <span v-bind="props" class="text-uppercase"
+                  :class="$route.name == 'Current-projects' || $route.name == 'Completed-projects' || $route.name == 'Single-current-project' || $route.name == 'Single-completed-project' ? 'router-link-exact-active' : ''">
+                  Our project <v-icon class="mb-1">mdi-chevron-down</v-icon></span>
+              </template>
+              <v-list-item class="submenu">
+                <router-link to="/Current-projects" :class="$route.name == 'Single-current-project' ? 'router-link-exact-active'
+                  : ''"><v-icon class="mb-1">mdi-chevron-right</v-icon> Current Projects</router-link>
+              </v-list-item>
+              <v-divider class="border-opacity-75"></v-divider>
+              <v-list-item class="submenu">
+                <router-link to="/Completed-projects" :class="
+                  $route.name == 'Single-completed-project'
+                    ? 'router-link-exact-active'
+                    : ''"><v-icon class="mb-1">mdi-chevron-right</v-icon> Completed projects</router-link>
+              </v-list-item>
+            </v-list-group>
+          </v-list>
+        </li>
+        <li>
+          <router-link to="/Our-partner">Our partner</router-link>
+        </li>
+        <li>
+          <router-link to="/Join-us" :class="$route.name == 'Details-join-us' ? 'router-link-exact-active' : ''">Join
+            us</router-link>
+        </li>
+        <li>
+          <router-link to="/Contact-us">Contact us</router-link>
+        </li>
+      </ul>
+    </div>
+  </v-navigation-drawer>
+  <!-- Menu Bar Media End-->
+  <!-- Appbar -->
   <v-app-bar height="100" id="app-bar">
-    <router-link to="/"
-      ><img :src="app_url + '/images/logo.png'" alt="Logo Link innova" class="style-logo"
-    /></router-link>
+    <router-link to="/"><img :src="app_url + '/images/logo.png'" alt="Logo Link innova"
+        class="style-logo" /></router-link>
     <v-spacer></v-spacer>
-    <div class="row pe-5">
-      <div class="col-md-12 icon-login mb-2">
+    <!-- FOR Mobile  -->
+    <div class="pe-5 hidden-md-and-up text-h4 text-white">
+      <!-- click open Menubar -->
+      <i class="fa-regular fa-bars mx-5" @click.stop="drawer = !drawer"></i>
+    </div>
+
+    <!-- FOR Desktop-->
+    <div class="row pe-5 hidden-sm-and-down">
+      <div class="col-md-12 text-end icon-login mb-2">
         <ul>
           <li>
             <router-link to="/Login-admin">
@@ -34,57 +99,41 @@
             <router-link to="/">Home</router-link>
           </li>
           <li>
-            <router-link
-              to="/News-and-activities"
-              :class="
-                $route.name == 'News-and-activities-read'
-                  ? 'router-link-exact-active'
-                  : ''
-              "
-              >News & activities</router-link
-            >
+            <router-link to="/News-and-activities" :class="
+              $route.name == 'News-and-activities-read'
+                ? 'router-link-exact-active'
+                : ''
+            ">News & activities</router-link>
           </li>
           <li>
             <v-menu open-on-hover>
               <template v-slot:activator="{ props: menu }">
-                <span
-                  v-bind="mergeProps(menu, tooltip)"
-                  :class="
-                    $route.name == 'Current-projects' ||
+                <span v-bind="mergeProps(menu, tooltip)" :class="
+                  $route.name == 'Current-projects' ||
                     $route.name == 'Completed-projects' ||
                     $route.name == 'Single-current-project' ||
                     $route.name == 'Single-completed-project'
-                      ? 'router-link-exact-active'
-                      : ''
-                  "
-                  >Our project <v-icon class="mb-1">mdi-chevron-down</v-icon></span
-                >
+                    ? 'router-link-exact-active'
+                    : ''
+                ">Our project <v-icon class="mb-1">mdi-chevron-down</v-icon></span>
               </template>
               <v-list id="dropdown-munu" class="text-uppercase p-0">
                 <v-list-item>
-                  <router-link
-                    to="/Current-projects"
-                    :class="
-                      $route.name == 'Single-current-project'
-                        ? 'router-link-exact-active'
-                        : ''
-                    "
-                    ><v-icon class="mb-1">mdi-chevron-right</v-icon> Current
-                    Projects</router-link
-                  >
+                  <router-link to="/Current-projects" :class="
+                    $route.name == 'Single-current-project'
+                      ? 'router-link-exact-active'
+                      : ''
+                  "><v-icon class="mb-1">mdi-chevron-right</v-icon> Current
+                    Projects</router-link>
                 </v-list-item>
                 <hr class="m-2" />
                 <v-list-item>
-                  <router-link
-                    to="/Completed-projects"
-                    :class="
-                      $route.name == 'Single-completed-project'
-                        ? 'router-link-exact-active'
-                        : ''
-                    "
-                    ><v-icon class="mb-1">mdi-chevron-right</v-icon> Completed
-                    projects</router-link
-                  >
+                  <router-link to="/Completed-projects" :class="
+                    $route.name == 'Single-completed-project'
+                      ? 'router-link-exact-active'
+                      : ''
+                  "><v-icon class="mb-1">mdi-chevron-right</v-icon> Completed
+                    projects</router-link>
                 </v-list-item>
               </v-list>
             </v-menu>
@@ -93,11 +142,8 @@
             <router-link to="/Our-partner">Our partner</router-link>
           </li>
           <li>
-            <router-link
-              to="/Join-us"
-              :class="$route.name == 'Details-join-us' ? 'router-link-exact-active' : ''"
-              >Join us</router-link
-            >
+            <router-link to="/Join-us" :class="$route.name == 'Details-join-us' ? 'router-link-exact-active' : ''">Join
+              us</router-link>
           </li>
           <li>
             <router-link to="/Contact-us">Contact us</router-link>
@@ -111,7 +157,9 @@
 import { mergeProps } from "vue";
 
 export default {
-  data: () => ({}),
+  data: () => ({
+    drawer: null,
+  }),
   methods: {
     mergeProps,
   },

@@ -1,19 +1,7 @@
 <template>
-  <v-carousel
-    hide-delimiters
-    cycle
-    class="banner"
-    height="700px"
-    hide-delimiter-background
-    show-arrows="hover"
-  >
-    <v-carousel-item
-      v-for="(slide, i) in slides"
-      :key="i"
-      :src="app_url + images[i]"
-      cover
-    >
-      <v-card-title class="ma-5 bg-text" height="auto">
+  <v-carousel hide-delimiters cycle class="banner" height="700px" hide-delimiter-background show-arrows="hover">
+    <v-carousel-item v-for="(slide, i) in slides" :key="i" :src="app_url + images[i]" cover>
+      <v-card-title class="bg-text" height="auto">
         <p>{{ title[i] }}</p>
         <p v-if="subtitle[i] != ''">{{ subtitle[i] }}</p>
       </v-card-title>
@@ -26,7 +14,7 @@ export default {
   data() {
     return {
       title: [
-        "Hilltania Condominium ฮิลทาเนีย คอนโดมิเนียม",
+        "Hilltania Condominium",
         "อาคารอำนวยการผู้ป่วยนอก และอุบัติเหตุฉุกเฉิน 11 ชั้น",
         "ท่าอากาศยานนานาชาติเบตง",
         "อาคารศูนย์บริการโรคหัวใจ มะเร็ง และวินิจฉัยรักษา",

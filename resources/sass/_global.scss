@@ -3,14 +3,13 @@
 
     .bg-text {
         position: absolute;
-        left: 30%;
         bottom: 1%;
-        font-size: 24px;
+        font-size: 16px;
         text-align: center;
         background: #000000bb;
         color: #ffffff;
-        border-radius: 7px;
-        width: 40%;
+        // border-radius: 7px;
+        width: 100%;
 
         p {
             text-transform: uppercase;
@@ -54,7 +53,18 @@
         position: relative;
     }
 
-    .underline-header:after {
+    .underline-header-inpage {
+        // margin-top: 3.5rem;
+        padding-bottom: 0.75rem;
+        color: rgb(0, 0, 0);
+        font-size: 24px;
+        font-weight: bold;
+        text-shadow: 1px 1px 3px rgb(123, 123, 123);
+        position: relative;
+    }
+
+    .underline-header:after,
+    .underline-header-inpage:after {
         content: "";
         position: absolute;
         left: 25%;
@@ -92,6 +102,26 @@
         100% {
             left: 25%;
             width: 50%;
+        }
+    }
+
+    .txt-slide {
+        margin-top: 1rem;
+        font-size: 14px;
+        color: rgb(255, 255, 255);
+        text-shadow: 1px 1px 3px rgb(123, 123, 123);
+        animation: slide 1.5s;
+    }
+
+    @keyframes slide {
+        0% {
+            opacity: 0%;
+            transform: translateY(-50px)
+        }
+
+        100% {
+            opacity: 100%;
+            transform: translateY(0px)
         }
     }
 
@@ -159,6 +189,22 @@
                 margin: 0;
                 color: #000;
                 margin-bottom: 1.5rem;
+            }
+
+            .videoWrapper {
+                position: relative;
+                padding-bottom: 56.25%;
+                /* 16:9 */
+                padding-top: 25px;
+                height: 0;
+            }
+
+            .videoWrapper embed {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
             }
         }
 
@@ -257,15 +303,16 @@
 
     // Background parallax
     .bg-parallax {
-        background-color: #000;
+        background: rgb(0, 0, 0);
+        background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgb(31, 30, 30) 75%);
 
         .v-responsive__sizer {
             padding-bottom: 20% !important;
         }
 
         img {
-            opacity: 0.2;
-            filter: blur(2.5px);
+            opacity: 0.05;
+            
         }
 
         .bg-text {
@@ -275,14 +322,15 @@
             color: white;
 
             .discription-stype {
-                h3 {
-                    color: #ffffff;
+                .text-head-join-us {
+                    font-size: 24px;
+                    color: white;
                 }
 
                 ul {
                     list-style: none;
                     padding-top: 1rem;
-                    padding-left: 3rem;
+                    padding-left: 1rem;
 
                     li {
                         font-size: 18px;
@@ -318,17 +366,29 @@
     }
 
     .discription-stype {
-        padding: 3rem 0;
+        padding: 3% 5%;
 
-        h3 {
+        .text-head-join-us {
             color: #000000;
+            font-size: 24px;
+            font-weight: bold;
+            position: relative;
         }
+
+        .text-head-join-us:after {
+            content: "";
+            position: absolute;
+            left: 0%;
+            bottom: 0;
+            border: 1px solid rgb(255, 0, 0);
+            width: 100%;
+        }
+
 
         ul {
             list-style: none;
             padding-top: 1rem;
-            padding-left: 2rem;
-            padding-bottom: 2rem;
+            padding-left: 1rem;
 
             li {
                 color: #000000;
@@ -364,8 +424,8 @@
 
         .bg-text {
             margin: 0;
-            padding-top: 3rem;
-            padding-bottom: 3rem;
+            padding-top: 5%;
+            padding-bottom: 5%;
             width: 100%;
             height: 100%;
             background-color: rgba(255, 0, 0, 0.7);
@@ -373,8 +433,8 @@
             font-weight: bold;
             z-index: 2;
 
-            h1 {
-                color: #fff;
+            .text-head-join-us {
+                font-size: 24px;
             }
 
             h4 {
