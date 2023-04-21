@@ -51,13 +51,11 @@
           </v-card>
         </v-col>
       </v-row>
-    </v-container>
-    <v-main class="txt-anemetion">
-      <h3>
+      <div class="text-home-animetion">
         LINK INNOVA PROPERTIES COMPANY LIMITED 50 หมู่ 2 ตำบลตลาดขวัญ อำเภอดอยสะเก็ต
         จังหวัดเชียงใหม่ 50220 โทรศัพท์ : 053-039191 เบอร์มือถือ : 085-6956505
-      </h3>
-    </v-main>
+      </div>
+    </v-container>
   </section>
 </template>
 <script>

@@ -21,6 +21,7 @@
         display: inline;
         margin-left: 2rem;
         font-weight: bold;
+        font-size: 14px;
 
         span {
           font-weight: bold;
@@ -34,10 +35,8 @@
     }
   }
 
-
   .icon-login {
-    text-align: end;
-    font-size: 18px;
+    font-size: 24px;
     margin-bottom: 5px;
     padding: 0;
 
@@ -101,26 +100,6 @@ header.sticky#app-bar {
   }
 }
 
-.icon-login {
-  margin-top: 0.5rem;
-  color: #fff;
-  font-size: 18px;
-  margin-bottom: 5px;
-  padding: 0;
-
-  ul {
-    list-style: none;
-
-    li {
-      display: inline;
-      margin-left: 1rem;
-
-      i {
-        font-size: 22px;
-      }
-    }
-  }
-}
 
 #dropdown-munu {
   a {
