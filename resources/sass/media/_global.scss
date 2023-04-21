@@ -1,12 +1,13 @@
 // Small devices (landscape phones, 600px and up)
 @media (min-width: $media-breakpoint-sm) {
-  .bg-parallax-contant {
-    .bg-text {
-      padding: 20%;
+  .page-contents {
+    .bg-parallax-contant {
+      .bg-text {
+        padding: 10%;
+      }
+
     }
-
   }
-
 }
 
 // Medium devices (tablets, 960px and up)
@@ -16,25 +17,26 @@
       .style-btn {
         .btn {
           background-color: white;
-          color:red;
+          color: red;
         }
+
         .btn:hover {
           background-color: rgb(255, 0, 0);
-          color:rgb(255, 255, 255);
+          color: rgb(255, 255, 255);
         }
 
       }
     }
   }
-    
+
   .banner {
     .bg-text {
-        left: 30%;
-        font-size: 18px;
-        border-radius: 3px;
-        width: 40%;
+      left: 30%;
+      font-size: 18px;
+      border-radius: 3px;
+      width: 40%;
     }
-}
+  }
 
   .bg-parallax-contant {
 
@@ -51,7 +53,7 @@
 
 // Large devices (desktops, 1280px and up)
 @media (min-width: $media-breakpoint-lg) {
-  #app-bar{
+  #app-bar {
     .menu-bar {
       ul {
         li {
@@ -59,8 +61,10 @@
         }
       }
     }
+
     .icon-login {
       font-size: 26px;
+
       ul {
         li {
           i {
