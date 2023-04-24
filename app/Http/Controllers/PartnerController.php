@@ -14,7 +14,7 @@ class PartnerController extends Controller
      */
     public function index()
     {
-        
+       
     }
 
     /**
@@ -35,7 +35,7 @@ class PartnerController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd($request->all());
     }
 
     /**

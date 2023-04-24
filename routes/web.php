@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\SinglePageController;
+use App\Http\Controllers\PartnerController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,3 +19,5 @@ Route::get('/{any}', [SinglePageController::class, 'index'])->where('any', '.*')
 Route::get('/', function () {
     return view('app');
 });
+Route::resource('partner',PartnerController::class);
+// Route::post('/partner/create',[PartnerController::class,'store']);
