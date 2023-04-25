@@ -12,44 +12,44 @@
                         </v-col>
                     </template>
                     <v-card>
-                        <form @submit.prevent="saveData()">
-                            <v-toolbar class="text-center text-white" color="#D50703"
-                                title="INSERT INTO OUT PARTNER"></v-toolbar>
-                            <v-card-text>
-                                <v-container>
-                                    <v-row class="d-flex align-center">
-                                        <v-col cols="2">
-                                            <v-list-subheader>Name : </v-list-subheader>
-                                        </v-col>
-                                        <v-col cols="10" sm="10" md="10">
-                                            <v-text-field v-model="partner.name_partner" variant="outlined"
-                                                required></v-text-field>
-                                        </v-col>
-                                        <v-col cols="2">
-                                            <v-list-subheader>Website : </v-list-subheader>
-                                        </v-col>
-                                        <v-col cols="10" sm="10" md="10">
-                                            <v-text-field v-model="partner.img_partner" variant="outlined"
-                                                required></v-text-field>
-                                        </v-col>
-                                        <v-col class="d-flex justify-center align-center fileinsert" cols="12" sm="12"
-                                            md="12">
-                                            <label for="myImage"><i class="mdi mdi-image-plus-outline"></i></label>
-                                            <input type="file" id="myImage" accept="image/png, image/gif, image/jpeg" />
-                                        </v-col>
-                                    </v-row>
-                                </v-container>
-                            </v-card-text>
-                            <v-card-actions class="d-flex justify-center align-center">
-                                <v-btn color="#F9A825" @click="dialoginsert = false">
-                                    <i class="fa-regular fa-xmark"></i>Cancle
-                                </v-btn>
-                                <v-btn type="submit" color="#28A745" @click="dialoginsert = false">
-                                    <i class="fa-light fa-floppy-disk"></i>Save
-                                </v-btn>
-
-                            </v-card-actions>
-                        </form>
+                        <v-toolbar class="text-center text-white" color="#D50703"
+                            title="INSERT INTO OUT PARTNER"></v-toolbar>
+                        <v-card-text>
+                            <v-container>
+                                <v-row class="d-flex align-center">
+                                    <v-col cols="2">
+                                        <v-list-subheader>Name : </v-list-subheader>
+                                    </v-col>
+                                    <v-col cols="10" sm="10" md="10">
+                                        <v-text-field v-model="partner.name_partner" variant="outlined"
+                                            required></v-text-field>
+                                    </v-col>
+                                    <v-col cols="2">
+                                        <v-list-subheader>img_partner : </v-list-subheader>
+                                    </v-col>
+                                    <v-col cols="10" sm="10" md="10">
+                                        <v-text-field v-model="partner.img_partner" variant="outlined"
+                                            required></v-text-field>
+                                    </v-col>
+                                    <v-col class="d-flex justify-center align-center fileinsert" cols="12" sm="12" md="12">
+                                        <label for="myImage"><i class="mdi mdi-image-plus-outline"></i></label>
+                                        <input type="file" id="myImage" accept="image/png, image/gif, image/jpeg" />
+                                    </v-col>
+                                </v-row>
+                            </v-container>
+                        </v-card-text>
+                        <v-card-actions class="d-flex justify-center align-center">
+                            <v-btn color="#F9A825" @click="dialoginsert = false">
+                                <i class="fa-regular fa-xmark"></i>Cancle
+                            </v-btn>
+                            <v-btn type="submit" color="#28A745" @click="dialoginsert = false">
+                                <i class="fa-light fa-floppy-disk"></i>Save
+                            </v-btn>
+                            <v-btn type="submit" color="#28A745" @click="saveData()">
+                            <i class="fa-light fa-floppy-disk"></i>Save data
+                        </v-btn>
+                        </v-card-actions>
+                        
                     </v-card>
                 </v-dialog>
                 <!-- dialogInsert END -->
@@ -233,14 +233,11 @@ export default {
     },
     methods: {
         saveData() {
-            axios.post('/partner/create', this.partner).then(
-                response => {
-                    console.log(response);
-                }
-            ).catch(error => {
-                console.log('Error here');
-            })
+            axios.post('/apipartner', this.partner)
+            alert('Adding Data');
+
         }
+        
     }
 }
 </script>

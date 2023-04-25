@@ -12,7 +12,7 @@ const webpack = require('webpack');
  */
 
 // default
-const default_url = 'http://localhost/laravel9-vue3-vite'
+const default_url = 'http://localhost/vue/Link-innova'
 const app_path = () => {
   let path = (process.env.APP_PATH || '/')
   return (path.substr(path.length - 1) != '/') ? path + '/' : path

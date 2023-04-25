@@ -19,5 +19,5 @@ Route::get('/{any}', [SinglePageController::class, 'index'])->where('any', '.*')
 Route::get('/', function () {
     return view('app');
 });
-Route::resource('partner',PartnerController::class);
-// Route::post('/partner/create',[PartnerController::class,'store']);
+// Route::resource('partner',PartnerController::class);
+// Route::post('/partner',[PartnerController::class,'store']);
