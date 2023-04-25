@@ -233,7 +233,7 @@ export default {
     },
     methods: {
         saveData() {
-            axios.post('/api/apipartner', this.partner)
+            axios.post('/apipartner', this.partner)
             alert('Adding Data');
 
         }
