@@ -25,7 +25,14 @@
                                             required></v-text-field>
                                     </v-col>
                                     <v-col cols="2">
-                                        <v-list-subheader>img_partner : </v-list-subheader>
+                                        <v-list-subheader>website : </v-list-subheader>
+                                    </v-col>
+                                    <v-col cols="10" sm="10" md="10">
+                                        <v-text-field v-model="partner.website_partner" variant="outlined"
+                                            required></v-text-field>
+                                    </v-col>
+                                    <v-col cols="2">
+                                        <v-list-subheader>IMG : </v-list-subheader>
                                     </v-col>
                                     <v-col cols="10" sm="10" md="10">
                                         <v-text-field v-model="partner.img_partner" variant="outlined"
@@ -42,14 +49,12 @@
                             <v-btn color="#F9A825" @click="dialoginsert = false">
                                 <i class="fa-regular fa-xmark"></i>Cancle
                             </v-btn>
-                            <v-btn type="submit" color="#28A745" @click="dialoginsert = false">
+                            <v-btn type="submit" color="#28A745" @click="dialoginsert = false, saveData()">
                                 <i class="fa-light fa-floppy-disk"></i>Save
                             </v-btn>
-                            <v-btn type="submit" color="#28A745" @click="saveData()">
-                            <i class="fa-light fa-floppy-disk"></i>Save data
-                        </v-btn>
+
                         </v-card-actions>
-                        
+
                     </v-card>
                 </v-dialog>
                 <!-- dialogInsert END -->
@@ -77,18 +82,15 @@
                                     <td>{{ item.website }}</td>
                                     <td>
                                         <!-- dialogView -->
-                                        <v-btn color="#00D1FF" class="text-white" @click="dialogview = true">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </v-btn>
+                                        <i class="fa-solid fa-eye ma-2 action-backend-view" @click="dialogview = true"></i>
+
                                         <!-- dialogView END -->
                                         <!-- dialogEdit -->
-                                        <v-btn color="#F9A825" class="text-white" @click="dialogedit = true">
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </v-btn>
+                                        <i class="fa-solid fa-file-pen ma-2 action-backend-edit" @click="dialogedit = true"></i>
+
                                         <!-- dialogEdit END -->
-                                        <v-btn color="#D50703" class="text-white">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </v-btn>
+                                        <i class="fa-solid fa-trash ma-2 action-backend-delete"
+                                            style="font-size: 20px; color:#D50703; cursor: pointer;"></i>
                                     </td>
                                 </tr>
                             </tbody>
@@ -115,13 +117,19 @@
                                 <v-list-subheader>Name : </v-list-subheader>
                             </v-col>
                             <v-col cols="10" sm="10" md="10">
-                                <v-text-field variant="Plain" readonly></v-text-field>
+                                <v-text-field v-model="partner.name_partner" variant="Plain" readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Website : </v-list-subheader>
                             </v-col>
                             <v-col cols="10" sm="10" md="10">
-                                <v-text-field variant="Plain" readonly></v-text-field>
+                                <v-text-field v-model="partner.website_partner" variant="Plain" readonly></v-text-field>
+                            </v-col>
+                            <v-col cols="2">
+                                <v-list-subheader>IMG : </v-list-subheader>
+                            </v-col>
+                            <v-col cols="10" sm="10" md="10">
+                                <v-text-field v-model="partner.img_partner" variant="Plain" readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Date Create : </v-list-subheader>
@@ -157,13 +165,19 @@
                                 <v-list-subheader>Name : </v-list-subheader>
                             </v-col>
                             <v-col cols="10" sm="10" md="10">
-                                <v-text-field variant="outlined" required></v-text-field>
+                                <v-text-field v-model="partner.name_partner" variant="outlined" required></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Website : </v-list-subheader>
                             </v-col>
                             <v-col cols="10" sm="10" md="10">
-                                <v-text-field variant="outlined" required></v-text-field>
+                                <v-text-field v-model="partner.website_partner" variant="outlined" required></v-text-field>
+                            </v-col>
+                            <v-col cols="2">
+                                <v-list-subheader>IMG : </v-list-subheader>
+                            </v-col>
+                            <v-col cols="10" sm="10" md="10">
+                                <v-text-field v-model="partner.img_partner" variant="outlined" required></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Date Create : </v-list-subheader>
@@ -205,6 +219,7 @@ export default {
             dialogedit: false,
             'partner': {
                 'name_partner': '',
+                'website_partner': '',
                 'img_partner': ''
             },
             desserts: [
@@ -237,7 +252,7 @@ export default {
             alert('Adding Data');
 
         }
-        
+
     }
 }
 </script>

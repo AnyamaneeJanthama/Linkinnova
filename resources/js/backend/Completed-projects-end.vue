@@ -90,18 +90,15 @@
                                     <td>{{ item.videoname }}</td>
                                     <td>
                                         <!-- dialogView -->
-                                        <v-btn color="#00D1FF" class="text-white" @click="dialogview = true">
-                                            <i class="fa-solid fa-eye"></i>
-                                        </v-btn>
+                                        <i class="fa-solid fa-eye ma-2 action-backend-view" @click="dialogview = true"></i>
+
                                         <!-- dialogView END -->
                                         <!-- dialogEdit -->
-                                        <v-btn color="#F9A825" class="text-white" @click="dialogedit = true">
-                                            <i class="fa-solid fa-file-pen"></i>
-                                        </v-btn>
+                                        <i class="fa-solid fa-file-pen ma-2 action-backend-edit" @click="dialogedit = true"></i>
+
                                         <!-- dialogEdit END -->
-                                        <v-btn color="#D50703" class="text-white">
-                                            <i class="fa-solid fa-trash"></i>
-                                        </v-btn>
+                                        <i class="fa-solid fa-trash ma-2 action-backend-delete"
+                                            style="font-size: 20px; color:#D50703; cursor: pointer;"></i>
                                     </td>
                                 </tr>
                             </tbody>

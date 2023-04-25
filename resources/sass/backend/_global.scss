@@ -99,3 +99,17 @@
         visibility: none;
     }
 }
+.action-backend {
+    font-size: 20px; 
+    cursor: pointer;
+    &-view{
+        color:#00D1FF; 
+    }
+    &-edit{
+        color:#F9A825; 
+    }
+    &-delete{
+        color:#D50703; 
+    }
+}
+
