@@ -3,7 +3,7 @@
         <v-main>
             <v-row class="ma-1 news-activitie">
                 <!-- dialogInsert -->
-                <v-dialog v-model="dialoginsert" persistent width="auto">
+                <v-dialog v-model="dialoginsert" width="auto">
                     <template v-slot:activator="{ props }">
                         <v-col cols="8" class="d-flex align-end">
                             <v-btn color="#D50703" class="text-white" v-bind="props"><i
@@ -12,6 +12,7 @@
                         </v-col>
                     </template>
                     <v-card>
+
                         <v-toolbar class="text-center text-white" color="#D50703"
                             title="INSERT INTO NEWS & ACTIVITIES"></v-toolbar>
                         <v-card-text>
@@ -61,8 +62,8 @@
                             <v-btn color="#28A745" @click="dialoginsert = false">
                                 <i class="fa-light fa-floppy-disk"></i>Save
                             </v-btn>
-
                         </v-card-actions>
+
                     </v-card>
                 </v-dialog>
                 <!-- dialogInsert END -->

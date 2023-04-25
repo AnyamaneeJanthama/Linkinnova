@@ -3,7 +3,7 @@
         <v-main>
             <v-row class="ma-1 news-activitie">
                 <!-- dialogInsert -->
-                <v-dialog v-model="dialoginsert" persistent width="auto">
+                <v-dialog v-model="dialoginsert" width="auto">
                     <template v-slot:activator="{ props }">
                         <v-col cols="8" class="d-flex align-end">
                             <v-btn color="#D50703" class="text-white" v-bind="props"><i
@@ -21,19 +21,15 @@
                                         <v-list-subheader>Name : </v-list-subheader>
                                     </v-col>
                                     <v-col cols="10" sm="10" md="10">
-                                        <v-text-field variant="outlined" required></v-text-field>
+                                        <v-text-field v-model="partner.name_partner" variant="outlined"
+                                            required></v-text-field>
                                     </v-col>
                                     <v-col cols="2">
-                                        <v-list-subheader>Website : </v-list-subheader>
+                                        <v-list-subheader>img_partner : </v-list-subheader>
                                     </v-col>
                                     <v-col cols="10" sm="10" md="10">
-                                        <v-text-field variant="outlined" required></v-text-field>
-                                    </v-col>
-                                    <v-col cols="2">
-                                        <v-list-subheader>Date Create : </v-list-subheader>
-                                    </v-col>
-                                    <v-col cols="10" sm="10" md="10">
-                                        <input type="date" name="date">
+                                        <v-text-field v-model="partner.img_partner" variant="outlined"
+                                            required></v-text-field>
                                     </v-col>
                                     <v-col class="d-flex justify-center align-center fileinsert" cols="12" sm="12" md="12">
                                         <label for="myImage"><i class="mdi mdi-image-plus-outline"></i></label>
@@ -46,11 +42,14 @@
                             <v-btn color="#F9A825" @click="dialoginsert = false">
                                 <i class="fa-regular fa-xmark"></i>Cancle
                             </v-btn>
-                            <v-btn color="#28A745" @click="dialoginsert = false">
+                            <v-btn type="submit" color="#28A745" @click="dialoginsert = false">
                                 <i class="fa-light fa-floppy-disk"></i>Save
                             </v-btn>
-
+                            <v-btn type="submit" color="#28A745" @click="saveData()">
+                            <i class="fa-light fa-floppy-disk"></i>Save data
+                        </v-btn>
                         </v-card-actions>
+                        
                     </v-card>
                 </v-dialog>
                 <!-- dialogInsert END -->
@@ -109,7 +108,8 @@
                                 <v-list-subheader>ID : </v-list-subheader>
                             </v-col>
                             <v-col cols="9" sm="9" md="9" class="dialogtitleunderline">
-                                <v-text-field variant="Plain"  model-value="2" single-line hide-details readonly></v-text-field>
+                                <v-text-field variant="Plain" model-value="2" single-line hide-details
+                                    readonly></v-text-field>
                             </v-col>
                             <v-col cols="2">
                                 <v-list-subheader>Name : </v-list-subheader>
@@ -149,8 +149,8 @@
                                 <v-list-subheader>ID : </v-list-subheader>
                             </v-col>
                             <v-col cols="10" sm="10" md="10">
-                                <v-text-field variant="outlined" model-value="2" required> 
-                                    
+                                <v-text-field variant="outlined" model-value="2" required>
+
                                 </v-text-field>
                             </v-col>
                             <v-col cols="2">
@@ -195,12 +195,18 @@
 </template>
 
 <script>
+import axios from 'axios';
+
 export default {
     data() {
         return {
             dialoginsert: false,
             dialogview: false,
             dialogedit: false,
+            'partner': {
+                'name_partner': '',
+                'img_partner': ''
+            },
             desserts: [
                 {
                     id: 1,
@@ -225,6 +231,14 @@ export default {
             ],
         }
     },
+    methods: {
+        saveData() {
+            axios.post('/api/apipartner', this.partner)
+            alert('Adding Data');
+
+        }
+        
+    }
 }
 </script>
 

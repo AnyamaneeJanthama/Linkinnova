@@ -47,7 +47,11 @@
       <div class="gallery">
         <v-row>
           <v-col cols="6" sm="4" md="3" lg="2" v-for="(item, index) in items" :key="index" class="card-content">
+<<<<<<< HEAD
             <v-card class="mx-auto" max-width="95%" v-bind="props">
+=======
+            <v-card class="mx-auto" height="95%" v-bind="props">
+>>>>>>> bc292fd18dff4f7e10cffec708deece927808d76
               <div class="class-image">
                 <v-img height="150" :src="app_url + item.img" cover />
               </div>

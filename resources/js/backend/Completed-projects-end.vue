@@ -3,7 +3,7 @@
         <v-main>
             <v-row class="ma-1 news-activitie">
                 <!-- dialogInsert -->
-                <v-dialog v-model="dialoginsert" persistent width="auto">
+                <v-dialog v-model="dialoginsert" width="auto">
                     <template v-slot:activator="{ props }">
                         <v-col cols="8" class="d-flex align-end">
                             <v-btn color="#D50703" class="text-white" v-bind="props"><i

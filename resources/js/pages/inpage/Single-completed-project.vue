@@ -42,7 +42,6 @@
             </v-col>
           </v-row>
         </div>
-        <v-divider class="my-2"></v-divider>
       </v-container>
       <div class="gallery">
         <v-row>

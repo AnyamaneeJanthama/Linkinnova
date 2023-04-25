@@ -3,9 +3,7 @@
     <div class="banner-page">
       <img
         src="https://lh3.googleusercontent.com/u/0/drive-viewer/AAOQEOSrpENKIwRyNT-UaJlO8X09KgQilUQKOo6KevC-_YxmLHNECaLErXaZRfvMaaJCPHez_NRrCy2-1sQFNYaYwwGwy6_6tA=w1960-h1424"
-        class="d-block"
-        alt="Banner Join us"
-      />
+        class="d-block" alt="Banner Join us" />
     </div>
     <div class="header-page">
       <ol>
@@ -23,24 +21,10 @@
     </div>
     <v-container class="card-join-us">
       <v-row class="my-5">
-        <v-col
-          lg="3"
-          md="4"
-          sm="6"
-          cols="12"
-          class="pa-5 my-2"
-          v-for="item in items"
-          :key="item.id"
-        >
+        <v-col lg="3" md="4" sm="6" cols="12" class="pa-5 my-2" v-for="item in items" :key="item.id">
           <v-hover v-slot="{ isHovering, props }" open-delay="100%">
-            <v-card
-              :elevation="isHovering ? 6 : 1"
-              :class="{ 'on-hover': isHovering }"
-              class="mx-auto pt-2 pb-3"
-              height="100%"
-              max-width="100%"
-              v-bind="props"
-            >
+            <v-card :elevation="isHovering ? 6 : 1" :class="{ 'on-hover': isHovering }" class="mx-auto pt-2 pb-3"
+              height="100%" max-width="100%" v-bind="props">
               <v-card-text class="txt-content">
                 {{ item.content }}
               </v-card-text>
@@ -61,10 +45,7 @@
       </v-row>
     </v-container>
     <div class="bg-parallax mx-auto">
-      <v-parallax
-        :src="app_url + '/images/images-background/back-graound-join-us1.jpg'"
-        class="align-center"
-      >
+      <v-parallax :src="app_url + '/images/images-background/back-graound-join-us1.jpg'" class="align-center">
         <div class="bg-text text-center py-3" height="100%">
           <span class="underline-content text-white">ติดต่อสมัครงาน</span>
           <div class="mt-10">
@@ -79,112 +60,52 @@
         <v-row>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[0]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[0]" cover />
             </div>
           </v-col>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[1]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[1]" cover />
             </div>
           </v-col>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[2]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[2]" cover />
             </div>
           </v-col>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[3]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[3]" cover />
             </div>
           </v-col>
           <v-col lg="6" md="12" sm="12" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[4]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[4]" cover />
             </div>
           </v-col>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[5]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[5]" cover />
             </div>
           </v-col>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[6]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[6]" cover />
             </div>
           </v-col>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[7]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[7]" cover />
             </div>
           </v-col>
           <v-col lg="3" md="3" sm="6" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[8]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[8]" cover />
             </div>
           </v-col>
           <v-col lg="6" md="12" sm="12" cols="12" class="pa-3">
             <div class="class-image">
-              <v-img
-                class="rounded-3"
-                max-width="100%"
-                height="270"
-                :src="app_url + images[9]"
-                cover
-              />
+              <v-img class="rounded-3" max-width="100%" height="270" :src="app_url + images[9]" cover />
             </div>
           </v-col>
         </v-row>

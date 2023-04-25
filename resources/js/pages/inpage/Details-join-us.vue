@@ -48,7 +48,7 @@
         เปิดใจ พร้อมปรับตัวให้เข้ากับองค์กร)
       </p>
     </v-container>
-    <div class="bg-parallax">
+    <div class="bg-parallax-detail">
       <v-parallax :src="app_url + '/images/images-join-us/bg-img1.png'">
         <div class="bg-text">
           <v-container class="discription-stype">
